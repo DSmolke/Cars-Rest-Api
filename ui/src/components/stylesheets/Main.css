@@ -1,0 +1,11 @@
+#root {
+    height: 100vh;
+    width: 99vw;
+}
+body {
+    height: 100vh;
+    width: 99vw;
+}
+.f-btn {
+    width: 150px;
+}
