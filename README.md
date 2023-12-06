@@ -14,7 +14,10 @@ https://github.com/DSmolke/Samochody-01/assets/106284705/f1855abc-032b-441a-ada4
 
 
 
-https://github.com/DSmolke/Samochody-01/assets/106284705/b17020a2-da7e-4700-b5de-599698b1b4e5
+
+https://github.com/DSmolke/Samochody-01/assets/106284705/63868f1b-66a1-417e-9600-0c5e11785b75
+
+
 
 
 
