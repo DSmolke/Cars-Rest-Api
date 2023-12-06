@@ -2,9 +2,6 @@ from flask_mail import Mail, Message
 from datetime import datetime
 
 from app.env_variables import MAIL_USERNAME, MAIL_PASSWORD
-import logging
-
-logger = logging.getLogger(__name__)
 
 MAIL_SETTINGS = {
     'MAIL_SERVER': 'smtp.gmail.com',
@@ -22,7 +19,6 @@ class MailSender:
     @classmethod
     def init(cls, app):
         cls.mail = Mail(app)
-        logger.info(cls.mail)
 
     @classmethod
     def send_activation_email(cls, user_id: int, username: str, email: str) -> None:
@@ -438,4 +434,4 @@ table{
             html=html_body
         )
 
-        MailSender.mail.send(message)
+        MailSender.mail.send_activation_email(message)

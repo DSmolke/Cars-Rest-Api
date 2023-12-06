@@ -17,10 +17,8 @@ boto3 = "*"
 alembic = "*"
 werkzeug = "*"
 pymongo = "*"
-pytest = "*"
-mock = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.11.0"
+python_version = "3.11"

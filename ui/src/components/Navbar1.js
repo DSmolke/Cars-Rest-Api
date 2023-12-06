@@ -31,7 +31,7 @@ const Navbar1 = () => {
                                 Statistics
                             </a>
                             <ul className="dropdown-menu">
-                                <li><NavLink to={"/numeric-statistics"} className="dropdown-item" href="#">Numeric attributes</NavLink></li>
+                                <li><NavLink to={"numeric-statistics"} className="dropdown-item" href="#">Numeric attributes</NavLink></li>
                             </ul>
                         </li>
                     </ul>
