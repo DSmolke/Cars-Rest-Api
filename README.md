@@ -25,7 +25,7 @@ https://github.com/DSmolke/Samochody-01/assets/106284705/51f5e0ff-d536-4be5-9815
 - React (hooks)
 - Docker
 - AWS
-- pipenv
+- Postman
 
 # Tests
 #### Development was driven by TDD, all tests are made exclusively using pytest
@@ -37,3 +37,4 @@ https://github.com/DSmolke/Samochody-01/assets/106284705/51f5e0ff-d536-4be5-9815
 
 https://github.com/DSmolke/Cars-Rest-Api/assets/106284705/d8543412-c3e7-477a-8170-192c698a969d
 
+#### [Routes in Postman](https://documenter.getpostman.com/view/25317918/2s9YeN2UPS)
