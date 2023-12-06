@@ -17,6 +17,8 @@ boto3 = "*"
 alembic = "*"
 werkzeug = "*"
 pymongo = "*"
+pytest = "*"
+pytest-mock = "*"
 
 [dev-packages]
 
