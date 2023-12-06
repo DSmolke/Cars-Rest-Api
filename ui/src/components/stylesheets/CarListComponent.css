@@ -1,0 +1,51 @@
+
+.car-component {
+    background: #eaf3fc;
+    margin-bottom: 10px;
+}
+.car-attr{
+    background: cadetblue;
+}
+img {
+    width: 100%;
+}
+
+p {
+    margin: 0;
+}
+.color-div{
+    width: 10px;
+    height: 10px;
+}
+
+.statistic-element-header {
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
+.statistic-element-header > div > h1 {
+    margin-bottom: 50px;
+}
+
+.cards-keeper {
+    height: 200px;
+    color: white;
+
+}
+.statistic-card {
+    padding: 0;
+    height: 75%;
+}
+.statistic-card > h2 {
+    background-color: rgba(1,1,1,0.10);
+    height: 50%;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+}
+
+.statistic-card > h3 {
+
+}
