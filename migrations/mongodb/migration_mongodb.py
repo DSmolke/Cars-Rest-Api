@@ -64,8 +64,3 @@ def upgrade2(uri, port):
         ]
 
         cars.insert_many([car.to_dict() for car in cars_entities2])
-
-if __name__ == "__main__":
-    upgrade2('localhost', 27017)
-    # downgrade('localhost', 27017)
-    pass
