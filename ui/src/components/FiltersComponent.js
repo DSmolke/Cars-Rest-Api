@@ -61,22 +61,22 @@ const FiltersComponent = () => {
                         </button>
                     </div>
                     <div className={'col-lg-2'}>
-                        <button type="button" class="btn btn-primary f-btn" data-bs-toggle="modal"
+                        <button type="button" className="btn btn-primary f-btn" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal">
                             Attributes
                         </button>
                     </div>
 
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel"
                          aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Attribute filter</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        <div className="modal-dialog">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <h1 className="modal-title fs-5" id="exampleModalLabel">Attribute filter</h1>
+                                    <button type="button" className="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body">
+                                <div className="modal-body">
                                     <h5>Attribute</h5>
                                     <select onChange={(event) => setAttribute(event.target.value)}
                                             className="form-control form-control-lg">
@@ -93,13 +93,13 @@ const FiltersComponent = () => {
                                         <option value={"asc"}>Ascending</option>
                                     </select>
                                 </div>
-                                <div class="modal-footer">
+                                <div className="modal-footer">
                                     <button onClick={() => {
                                         setUrl(`http://localhost:80/cars/all/${attribute}/${order}`)
 
                                     }
 
-                                    } type="button" class="btn btn-primary" data-bs-dismiss="modal">Filter
+                                    } type="button" className="btn btn-primary" data-bs-dismiss="modal">Filter
                                     </button>
                                 </div>
 
@@ -110,22 +110,22 @@ const FiltersComponent = () => {
                     </div>
                     {/*End modal*/}
                     <div className={'col-lg-2'}>
-                        <button type="button" class="btn btn-primary f-btn" data-bs-toggle="modal"
+                        <button type="button" className="btn btn-primary f-btn" data-bs-toggle="modal"
                                 data-bs-target="#Modal1">
                             Color
                         </button>
                     </div>
 
-                    <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="Modal1Label"
+                    <div className="modal fade" id="Modal1" tabIndex="-1" aria-labelledby="Modal1Label"
                          aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="Modal1Label"></h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        <div className="modal-dialog">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <h1 className="modal-title fs-5" id="Modal1Label"></h1>
+                                    <button type="button" className="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body">
+                                <div className="modal-body">
                                     <h5>Select color</h5>
                                     <select onChange={(event) => setColor(event.target.value)}
                                             className="form-control form-control-lg">
@@ -140,11 +140,11 @@ const FiltersComponent = () => {
                                     </select>
 
                                 </div>
-                                <div class="modal-footer">
+                                <div className="modal-footer">
                                     <button onClick={() => {
                                         setUrl(`http://localhost:80/cars/colors_map?color=${color}`)
                                     }
-                                    } type="button" class="btn btn-primary" data-bs-dismiss="modal">Filter
+                                    } type="button" className="btn btn-primary" data-bs-dismiss="modal">Filter
                                     </button>
                                 </div>
 
