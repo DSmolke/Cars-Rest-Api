@@ -17,29 +17,32 @@ const FiltersComponent = () => {
     const [priceOrder, setPriceOrder] = useState("ASC")
     const [color, setColor] = useState("")
 
+    const fetchData = async () => {
+
+        const response = await axios.get(url, {"headers": {"Authorization": `Bearer ${localStorage['access_token']}`}})
+            .catch(err => console.log(err))
+        const data = await response?.data
+
+        if (data instanceof Array) {
+            setCars(data)
+        } else if (data instanceof Object) {
+            setCars(data[color])
+        }
+
+    }
+
     useEffect(() => {
         refreshToken()
+
     }, [])
 
     useEffect(() => {
-        const fetchData = async () => {
 
-            const response = await axios.get(url, {"headers": {"Authorization": `Bearer ${localStorage['access_token']}`}})
-                .catch(err => console.log(err))
-            const data = await response?.data
-
-            if (data instanceof Array) {
-                setCars(data)
-            } else if (data instanceof Object) {
-                setCars(data[color])
-            }
-
-        }
         fetchData()
     }, [url])
 
     if (refreshToken() === false) {
-        return (<Navigate to={"login"}/>)
+        return (<Navigate to={"/login"}/>)
     } else {
 
     return (<div>
