@@ -6,7 +6,10 @@ Cars data providing API
 
 Here is a brief demo of project set up and functionalities
 #### Registration
-https://github.com/DSmolke/Samochody-01/assets/106284705/a120a530-0769-4496-b8c9-6f460afb45de
+
+
+https://github.com/DSmolke/Cars-Rest-Api/assets/106284705/bd92f8ea-a993-48cf-93b9-9ff6e8c13819
+
 
 #### Authentication
 https://github.com/DSmolke/Samochody-01/assets/106284705/f1855abc-032b-441a-ada4-3997500352db
