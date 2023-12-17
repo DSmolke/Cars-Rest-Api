@@ -3,7 +3,7 @@ import axios from "axios";
 import './stylesheets/LoginForm.css'
 import {Navigate, NavLink} from "react-router-dom";
 import {setAuthToken} from "../authentication";
-import {InputDiv} from "./RegisterForm";
+import {InputDiv} from "./Register";
 
 
 const LoginForm = () => {
