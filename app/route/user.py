@@ -1,8 +1,11 @@
+import logging
+
 from flask import request, Response
 from flask_restful import Resource, reqparse
 from datetime import datetime
 from app.db.model import UserModel
 from app.email.configuration import MailSender
+
 
 class UserResource(Resource):
     parser = reqparse.RequestParser()
@@ -12,20 +15,26 @@ class UserResource(Resource):
     parser.add_argument('role', type=str, required=True, help='Role cannot be empty')
 
     def post(self) -> Response:
-        request_data = UserResource.parser.parse_args()
+        try:
+            request_data = UserResource.parser.parse_args()
 
-        if UserModel.find_by_username(request_data['username']):
-            return {'message': 'User already exists'}, 400
+            if UserModel.find_by_username(request_data['username']):
+                return {'message': 'User already exists'}, 400
 
-        if UserModel.find_by_email(request_data['email']):
-            return {'message': 'Email already exists'}, 400
+            if UserModel.find_by_email(request_data['email']):
+                return {'message': 'Email already exists'}, 400
 
-        user = UserModel(**request_data)
-        user.save_or_update()
+            user = UserModel(**request_data)
+            user.save_or_update()
 
+            MailSender.send_activation_email(user.id, user.username, user.email)
 
-        MailSender.send_activation_email(user.id, user.username, user.email)
-        return {'message': 'User created'}, 201
+            return {'message': 'User created'}, 201
+        except Exception as e:
+            logging.info(type(e))
+            logging.info(e)
+            return {'message': "Service that application relies on didn't respond"}, 503
+
 
 class UserActivationResource(Resource):
 
