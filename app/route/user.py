@@ -1,5 +1,3 @@
-import logging
-
 from flask import request, Response
 from flask_restful import Resource, reqparse
 from datetime import datetime
@@ -31,8 +29,6 @@ class UserResource(Resource):
 
             return {'message': 'User created'}, 201
         except Exception as e:
-            logging.info(type(e))
-            logging.info(e)
             return {'message': "Service that application relies on didn't respond"}, 503
 
 
